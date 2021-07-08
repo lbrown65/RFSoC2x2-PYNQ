@@ -34,4 +34,7 @@ validate_hw_platform ./${overlay_name}.xsa
 file copy -force ./${overlay_name}/${overlay_name}.runs/impl_1/${design_name}_wrapper.bit ${overlay_name}.bit
 
 # copy hwh files
-file copy -force ./${overlay_name}/${overlay_name}.srcs/sources_1/bd/${design_name}/hw_handoff/${design_name}.hwh ${overlay_name}.hwh
+set bd_file [get_files "${overlay_name}.bd"]
+set hwh_file [get_files -of_objects $bd_file "${overlay_name}.hwh"]
+file copy $hwh_file ${overlay_name}.hwh
+
