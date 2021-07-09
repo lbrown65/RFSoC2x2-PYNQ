@@ -41,6 +41,8 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 # project, but make sure you do not have an existing project
 # <./myproj/project_1.xpr> in the current working folder.
 
+variable overlay_name
+set overlay_name rfsoc2x2
 set list_projs [get_projects -quiet]
 if { $list_projs eq "" } {
    create_project ${overlay_name} ${overlay_name}  -part xczu28dr-ffvg1517-2-e
