@@ -345,19 +345,22 @@
 					#address-cells = <0x1>;
 					#size-cells = <0x0>;
 					lmxadc@0 {
-							compatible = "lineartechnology,ltc2488";
+							compatible = "nxp,sc18is602b";
 							reg = <0x0>;
 							spi-max-frequency = <400000>;
+							num_bytes = <3>;
 							};
 					lmxdac@1 {
-							compatible = "lineartechnology,ltc2488";
+							compatible = "nxp,sc18is602b";
 							reg = <0x1>;
 							spi-max-frequency = <400000>;
+							num_bytes = <3>;
 							};
 					lmk@3 {
-							compatible = "lineartechnology,ltc2488";
+							compatible = "nxp,sc18is602b";
 							reg = <0x3>;
 							spi-max-frequency = <400000>;
+							num_bytes = <3>;
 							};
 					};
 		};
